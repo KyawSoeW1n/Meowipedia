@@ -20,7 +20,7 @@ jobs:
 
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '18'
           cache: gradle
 
       - name: Gradle Build Action
@@ -36,7 +36,7 @@ jobs:
         uses: actions/setup-java@v4.0.0
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '18'
           cache: gradle
 
       - name: Test
