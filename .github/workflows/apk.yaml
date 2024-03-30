@@ -50,7 +50,8 @@ jobs:
       - name: Update BASE_URL KEY
         run:
           touch secrets.properties
-          echo BASE_URL=https://api.thecatapi.com/v1/ >> secrets.properties
+          echo "BASE_URL=\https://api.thecatapi.com/v1/\" >> secrets.properties
+#          echo BASE_URL=https://api.thecatapi.com/v1/ >> secrets.properties
           cat secrets.properties
 
       - name: Create Google Services JSON File
