@@ -2,7 +2,7 @@
 cores-dispatchers = "com.everest.dispatchers"
 kotlin = "1.9.23"
 gradle = "8.2.2"
-compose-compiler = "1.5.8"
+compose-compiler = "1.5.11"
 # google
 google-ksp = "1.9.23-1.0.19"
 google-hilt = "2.50"
