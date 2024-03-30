@@ -43,10 +43,12 @@ jobs:
         run: touch local.properties
 
       - name: Create Google Services JSON File
-        env:
-          GOOGLE_SERVICES_JSON: ${{ secrets.GOOGLE_SERVICES_JSON }}
-        run:
-          echo $GOOGLE_SERVICES_JSON | base64 -di > ./app/google-services.json
+        id: write_file
+        uses: timheuer/base64-to-file@v1.2
+        with:
+          fileName: 'google-services.json'
+          fileDir: './app'
+          encodedString: ${{ secrets.GOOGLE_SERVICES_JSON }}
 
       - name: Test
         run: ./gradlew test
