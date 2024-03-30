@@ -54,7 +54,6 @@ import com.everest.theme.dimen
 import com.everest.ui.R
 import com.everest.ui.dialog.LoadingDialog
 import com.everest.ui.shimmer.ShimmerBrush
-import java.util.Calendar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

@@ -139,10 +139,9 @@ fun SignInCompact(
                 )
 
                 else -> DefaultSignInView(
-                    onAction = onAction,
+                    onAction = onAction
                 )
             }
-
         }
     }
 }
@@ -202,7 +201,7 @@ fun SignInTablet(
                 else -> DefaultSignInView(
                     onAction = {
                         onAction(SignInAction.SignIn)
-                    },
+                    }
                 )
             }
         }
@@ -216,7 +215,6 @@ fun SignInTablet(
         )
     }
 }
-
 
 @OptIn(ExperimentalFoundationApi::class)
 @Preview(device = Devices.PIXEL_5)
