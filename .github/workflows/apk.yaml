@@ -41,19 +41,13 @@ jobs:
       - name: Touch local properties
         run: touch local.properties
 
-      - name: Update API_KEY
-        run:
-          touch secrets.properties
-          echo API_KEY=${{ secrets.API_KEY }} >> secrets.properties
-          cat secrets.properties
+      - name: Create Secrets Properties
+        id: write_file
+        uses: timheuer/base64-to-file@v1.2
+        with:
+          fileName: 'secrets.properties'
+          encodedString: ${{ secrets.SECRETS_PROPERTIES }}
 
-      - name: Update BASE_URL KEY
-        run:
-          touch secrets.properties
-          echo "aHR0cHM6Ly9hcGkudGhlY2F0YXBpLmNvbS92MS8=" | base64 --decode
-          
-#          echo BASE_URL=${{ secrets.API_KEY }} >> secrets.properties
-          cat secrets.properties
 
       - name: Create Google Services JSON File
         id: write_file
