@@ -50,7 +50,7 @@ jobs:
       - name: Update BASE_URL KEY
         run:
           touch secrets.properties
-          echo ${{ secrets.BASE_URL }} | base64 --decode
+          echo aHR0cHM6Ly9hcGkudGhlY2F0YXBpLmNvbS92MS8= | base64 --decode
           
 #          echo BASE_URL=${{ secrets.API_KEY }} >> secrets.properties
           cat secrets.properties
