@@ -51,7 +51,7 @@ jobs:
         run:
           touch secrets.properties
           echo ${{ secrets.BASE_URL }} | base64 --decode
-          echo BASE_URL=${{ secrets.BASE_URL }} | base64 --decode >> secrets.properties
+          
 #          echo BASE_URL=${{ secrets.API_KEY }} >> secrets.properties
           cat secrets.properties
 
