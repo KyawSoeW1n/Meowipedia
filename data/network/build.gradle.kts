@@ -19,7 +19,7 @@ dependencies {
 secrets {
     // Optionally specify a different file name containing your secrets.
     // The plugin defaults to "local.properties"
-    defaultPropertiesFileName = "local.defaults.properties"
+    defaultPropertiesFileName = "secrets.properties"
     propertiesFileName = "secrets.properties"
 
     // A properties file containing default secret values. This file can be
