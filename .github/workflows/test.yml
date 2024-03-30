@@ -48,7 +48,7 @@ jobs:
         with:
           fileName: 'google-services.json'
           fileDir: './app'
-          encodedString: ${{ secrets.GOOGLE_SERVICES_JSON }}
+          encodedString: ${{ secrets.GOOGLE_SERVICE_JSON }}
 
       - name: Test
         run: ./gradlew test
