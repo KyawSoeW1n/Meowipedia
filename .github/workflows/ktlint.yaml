@@ -47,6 +47,9 @@ jobs:
           java-version: '18'
           cache: 'gradle'
 
+      - name: Touch local properties
+        run: touch local.properties
+
 #      - name: Create-Test-properties
 #        run:
 #          echo API_KEY="https://api.thecatapi.com/v2/" > secrets.properties
