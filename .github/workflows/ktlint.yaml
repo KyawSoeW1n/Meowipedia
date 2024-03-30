@@ -51,8 +51,6 @@ jobs:
         run:
           echo API_KEY="https://api.thecatapi.com/v2/" > secrets.properties
           echo BASE_URL="https://api.thecatapi.com/v3/" >> secrets.properties
-        artifacts:
-          - secrets.properties
 
       - name: Format with KtLint
         run: ./gradlew ktlintFormat
