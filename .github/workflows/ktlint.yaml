@@ -50,15 +50,6 @@ jobs:
       - name: Touch local properties
         run: touch local.properties
 
-#      - name: Create-Test-properties
-#        run:
-#          echo API_KEY="https://api.thecatapi.com/v2/" > secrets.properties
-#          echo BASE_URL="https://api.thecatapi.com/v3/" >> secrets.properties
-#
-#      - uses: actions/upload-artifact@v4
-#        with:
-#          name: secrets.properties
-
       - name: Format with KtLint
         run: ./gradlew ktlintFormat
 
