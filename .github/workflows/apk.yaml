@@ -52,8 +52,6 @@ jobs:
           echo BASE_URL=${{ secrets.BASE_URL }} >> secrets.properties
           cat secrets.properties
 
-
-
       - name: Create Google Services JSON File
         id: write_file
         uses: timheuer/base64-to-file@v1.2
