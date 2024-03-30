@@ -26,6 +26,11 @@ jobs:
       - name: Gradle Build Action
         uses: gradle/gradle-build-action@v3.0.0
 
+      - name: Putting data
+        env:
+          DATA: ${{ secrets.GOOGLE_SERVICES_JSON }}
+        run: echo $DATA > /home/runner/work/<Project-Name>/<Project-Name>/app/google-services.json
+
   unit-test:
     runs-on: ubuntu-latest
     steps:
@@ -41,6 +46,11 @@ jobs:
 
       - name: Touch local properties
         run: touch local.properties
+
+      - name: Create Google Services JSON File
+        env:
+          GOOGLE_SERVICES_JSON: ${{ secrets.GOOGLE_SERVICES_JSON }}
+        run: echo $GOOGLE_SERVICES_JSON | base64 -di > ./android/app/google-services.json
 
       - name: Test
         run: ./gradlew test
