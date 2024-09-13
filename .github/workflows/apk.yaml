@@ -41,6 +41,11 @@ jobs:
       - name: Touch local properties
         run: touch local.properties
 
+      - name: Decode secrets.properties file
+        env:
+          SECRETS_PROPERTIES: ${{ secrets.SECRETS_PROPERTIES }}
+        run: echo "$SECRETS_PROPERTIES" | base64 -d > ./secrets.properties
+
       - name: Create Google Services JSON File
         id: write_file
         uses: timheuer/base64-to-file@v1.2
