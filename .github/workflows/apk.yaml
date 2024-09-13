@@ -24,7 +24,6 @@ jobs:
       - name: Gradle Build Action
         uses: gradle/gradle-build-action@v3.0.0
 
-
   package:
     name: Generate APK
     runs-on: ubuntu-latest
