@@ -43,9 +43,8 @@ jobs:
 
       - name: Decode secrets.properties file
         env:
-            SECRETS_PROPERTIES: ${{ secrets.SECRETS_PROPERTIES }}
+          SECRETS_PROPERTIES: ${{ secrets.SECRETS_PROPERTIES }}
         run: echo "$SECRETS_PROPERTIES" | base64 -d > ./secrets.properties
-
 
       - name: Create Google Services JSON File
         id: write_file
